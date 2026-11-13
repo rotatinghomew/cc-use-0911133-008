@@ -1,0 +1,587 @@
+{
+  "schema_version": 1,
+  "analysis_time": "2026-08-01T10:00:00",
+  "maximum_minutes": 30,
+  "households": [
+    {
+      "id": "H1",
+      "village": "V1",
+      "size": 3,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "H2",
+      "village": "V2",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "H3",
+      "village": "V3",
+      "size": 2,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "H4",
+      "village": "V1",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    }
+  ],
+  "shelters": [
+    {
+      "id": "S1",
+      "beds": 5,
+      "facility_slots": {
+        "accessible": 3
+      }
+    },
+    {
+      "id": "S2",
+      "beds": 5,
+      "facility_slots": {
+        "accessible": 2
+      }
+    }
+  ],
+  "facility_consumption": {
+    "accessible": "one-per-person-in-requiring-household"
+  },
+  "edges": [
+    {
+      "from": "V1",
+      "to": "S1",
+      "minutes": 10
+    },
+    {
+      "from": "V1",
+      "to": "S2",
+      "minutes": 20
+    },
+    {
+      "from": "V2",
+      "to": "S1",
+      "minutes": 12
+    },
+    {
+      "from": "V2",
+      "to": "S2",
+      "minutes": 40
+    },
+    {
+      "from": "V3",
+      "to": "S1",
+      "minutes": 20
+    },
+    {
+      "from": "V3",
+      "to": "S2",
+      "minutes": 8
+    }
+  ],
+  "closures": [
+    {
+      "from": "V3",
+      "to": "S2",
+      "start": "2026-08-01T09:00:00",
+      "end": "2026-08-01T12:00:00"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "current",
+      "changes": []
+    },
+    {
+      "name": "more-beds",
+      "changes": [
+        {
+          "shelter": "S1",
+          "extra_beds": 2
+        }
+      ]
+    },
+    {
+      "name": "facility-upgrade",
+      "changes": [
+        {
+          "shelter": "S2",
+          "extra_facility_slots": {
+            "accessible": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "road-recovered",
+      "changes": [
+        {
+          "restore_edge": [
+            "V3",
+            "S2"
+          ]
+        }
+      ]
+    }
+  ],
+  "larger_households": [
+    {
+      "id": "LH0",
+      "village": "V1",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH1",
+      "village": "V2",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH2",
+      "village": "V3",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH3",
+      "village": "V1",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH4",
+      "village": "V2",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH5",
+      "village": "V3",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH6",
+      "village": "V1",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH7",
+      "village": "V2",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH8",
+      "village": "V3",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH9",
+      "village": "V1",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH10",
+      "village": "V2",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH11",
+      "village": "V3",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH12",
+      "village": "V1",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH13",
+      "village": "V2",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH14",
+      "village": "V3",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH15",
+      "village": "V1",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH16",
+      "village": "V2",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH17",
+      "village": "V3",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH18",
+      "village": "V1",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH19",
+      "village": "V2",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH20",
+      "village": "V3",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH21",
+      "village": "V1",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH22",
+      "village": "V2",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH23",
+      "village": "V3",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH24",
+      "village": "V1",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH25",
+      "village": "V2",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH26",
+      "village": "V3",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH27",
+      "village": "V1",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH28",
+      "village": "V2",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH29",
+      "village": "V3",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH30",
+      "village": "V1",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH31",
+      "village": "V2",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH32",
+      "village": "V3",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH33",
+      "village": "V1",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH34",
+      "village": "V2",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH35",
+      "village": "V3",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH36",
+      "village": "V1",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH37",
+      "village": "V2",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH38",
+      "village": "V3",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH39",
+      "village": "V1",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH40",
+      "village": "V2",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH41",
+      "village": "V3",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH42",
+      "village": "V1",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH43",
+      "village": "V2",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH44",
+      "village": "V3",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH45",
+      "village": "V1",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH46",
+      "village": "V2",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH47",
+      "village": "V3",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH48",
+      "village": "V1",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH49",
+      "village": "V2",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH50",
+      "village": "V3",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH51",
+      "village": "V1",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH52",
+      "village": "V2",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH53",
+      "village": "V3",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH54",
+      "village": "V1",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH55",
+      "village": "V2",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH56",
+      "village": "V3",
+      "size": 1,
+      "required": [
+        "accessible"
+      ],
+      "group": "mobility"
+    },
+    {
+      "id": "LH57",
+      "village": "V1",
+      "size": 2,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH58",
+      "village": "V2",
+      "size": 3,
+      "required": [],
+      "group": "ordinary"
+    },
+    {
+      "id": "LH59",
+      "village": "V3",
+      "size": 4,
+      "required": [],
+      "group": "ordinary"
+    }
+  ]
+}

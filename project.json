@@ -1,0 +1,8 @@
+{
+  "package": "shelter_route_capacity",
+  "tests": "tests/shelter_allocations",
+  "entrypoint": "shelter_route_capacity.allocation.cli",
+  "fixture_prefix": [],
+  "database_flag": "--database",
+  "analysis_fixture": "fixtures/access_scenarios.json"
+}
